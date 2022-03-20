@@ -8,12 +8,16 @@ public class numberOfElements {
         int[] arr = {10, 15, 20, 2, 5, 1, 10, 2};
         int[] arr1 = {1, 2, 3, 4, 3, 2, 1};
         int[] arr2 = {1, 2, 3, 3, 2, 1};
-        numberOfElement(arr);
+        int[] arr3 = {1, 2, 3, 4, 5};
+        int N = 1;
+/*        numberOfElement(arr);
         average(arr);
         palindrome(arr);
         palindrome(arr1);
-        palindrome(arr2);
-
+        palindrome(arr2);*/
+        move(arr3, N);
+    }
+/*
     }
     static int numberOfElement(int [] arr) {
         int number = 0;
@@ -26,9 +30,9 @@ public class numberOfElements {
         return number;
     }
 
-        /**
-         * 2. Задан массив целых чисел, нужно найти среднее значение элементов
-         */
+        *//**
+     * 2. Задан массив целых чисел, нужно найти среднее значение элементов
+     *//*
     static int average(int [] arr) {
         int aver = 0;
         for (int j : arr) {
@@ -38,10 +42,10 @@ public class numberOfElements {
         System.out.println("Average of elements: " + average);
         return average;
     }
-        /**
-         * 3. Задан массив целых чисел, нужно ответить является ли он палиндромом (например: 12321 -> true, 123321 -> true, 123 -> false)
-         * @return
-         */
+        *//**
+     * 3. Задан массив целых чисел, нужно ответить является ли он палиндромом (например: 12321 -> true, 123321 -> true, 123 -> false)
+     * @return
+     *//*
     static boolean palindrome(int [] arr) {
         int result = 0;
         boolean isPalindrome = false;
@@ -57,12 +61,34 @@ public class numberOfElements {
         }
         System.out.println(isPalindrome);
         return isPalindrome;
+    }*/
+
+    /**
+     * 4. Задан массив целых чисел, нужно сдвинуть его элементы на N влево.
+     * Например: arr = 1,2,3,4,5 , N = 2, результат 3,4,5,1,2
+     */
+
+    static void move(int[] arr, int b) {
+        if (arr.length == 0) {
+            return;
+        }
+        int shift = b % arr.length;
+
+        int[] newArr = new int [arr.length];
+        for (int i = 0; i < newArr.length; i++) {
+            newArr[i] = arr[i];
+        }
+
+        for (int i = 0; i < arr.length - shift; i++) {
+            arr[i] = newArr[i + shift];
+        }
+        for (int i = 0; i < shift; i++) {
+            arr[i + shift] = newArr[i];
+        }
+
     }
-        /**
-         * 4. Задан массив целых чисел, нужно сдвинуть его элементы на N влево.
-         * Например: arr = 1,2,3,4,5 , N = 2, результат 3,4,5,1,2
-         */
 }
+
 
 
 
