@@ -2,22 +2,21 @@ package learning;
 
 public class numberOfElements {
     public static void main(String[] args) {
-        /**
-         * 1. Задан массив целых чисел, нужно найти количество элементов, значение которых больше чем их индекс
-         */
+        
+        // 1. Given an array of integers, you need to find the number of elements whose value is greater than their index
         int[] arr = {10, 15, 20, 2, 5, 1, 10, 2};
         int[] arr1 = {1, 2, 3, 4, 3, 2, 1};
         int[] arr2 = {1, 2, 3, 3, 2, 1};
         int[] arr3 = {1, 2, 3, 4, 5};
         int N = 1;
-/*        numberOfElement(arr);
+        numberOfElement(arr);
         average(arr);
         palindrome(arr);
         palindrome(arr1);
         palindrome(arr2);*/
         move(arr3, N);
     }
-/*
+
     }
     static int numberOfElement(int [] arr) {
         int number = 0;
@@ -30,9 +29,8 @@ public class numberOfElements {
         return number;
     }
 
-        *//**
-     * 2. Задан массив целых чисел, нужно найти среднее значение элементов
-     *//*
+ 
+    // 2. Given an array of integers, you need to find the average value of the elements
     static int average(int [] arr) {
         int aver = 0;
         for (int j : arr) {
@@ -42,8 +40,9 @@ public class numberOfElements {
         System.out.println("Average of elements: " + average);
         return average;
     }
-        *//**
-     * 3. Задан массив целых чисел, нужно ответить является ли он палиндромом (например: 12321 -> true, 123321 -> true, 123 -> false)
+    
+     // 3. An array of integers is given, you need to answer whether it is a palindrome 
+     // (for example: 12321 -> true, 123321 -> true, 123 -> false)
      * @return
      *//*
     static boolean palindrome(int [] arr) {
@@ -61,12 +60,12 @@ public class numberOfElements {
         }
         System.out.println(isPalindrome);
         return isPalindrome;
-    }*/
+    }
 
-    /**
-     * 4. Задан массив целых чисел, нужно сдвинуть его элементы на N влево.
-     * Например: arr = 1,2,3,4,5 , N = 2, результат 3,4,5,1,2
-     */
+    
+     //  4. Given an array of integers, you need to shift its elements by N to the left.
+     //  For example: arr = 1,2,3,4,5 , N = 2, result 3,4,5,1,2
+     
 
     static void move(int[] arr, int b) {
         if (arr.length == 0) {
@@ -86,7 +85,6 @@ public class numberOfElements {
             arr[i + shift] = newArr[i];
         }
 
-    }
 }
 
 

@@ -2,7 +2,7 @@ package learning;
 
 public class Array2Examples {
 
-    //решето эратосфена
+    //eratosfen
     //0 1 2 3 4 5 6 7 8 9 10 11 12
     //i = 2
     //0 1 2 3 x 5 x 7 x 9 x 11 x
@@ -10,7 +10,7 @@ public class Array2Examples {
     //0 1 2 3 x 5 x 7 x x x 11 x
     //i * i <= max
 
-    static boolean[] getEratosfen(int max) { //true - значит что элемент вычеркнут
+    static boolean[] getEratosfen(int max) { 
         boolean[] result = new boolean[max + 1];
         for (int i = 2; i * i <= max; i++) {
             for (int j = i + 1; j <= max; j++) {
@@ -22,7 +22,7 @@ public class Array2Examples {
         return result;
     }
 
-    //найти значение максимального элемента в массиве
+    //max into array
     static int findMax(int[] arr) {
         if (arr.length == 0) {
             return 0;

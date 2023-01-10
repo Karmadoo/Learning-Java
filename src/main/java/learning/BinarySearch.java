@@ -2,14 +2,6 @@ package learning;
 
 public class BinarySearch {
 
-    //1 3 4 5 6 7 8 9
-    //6 - содержится или нет?
-    //6 7 8 9
-    //6 7
-    //true
-
-    //N, делим на 2 части: 2^x = N -> x = lg N
-
     static boolean search(int[] arr, int target) {
         return search(arr, 0, arr.length - 1, target);
     }
